@@ -1,0 +1,3 @@
+1 – É uma linguagem utilizada para o desenvolvimento de shaders dentro do pipeline do OpenGL. O Vertex shading que processa cada vértice separadamente e o Fragment shading que processa o fragmento separadamente.
+2 – Primitivas Gráficas são os elementos básicos que compõem um desenho, tais como pontos e segmentos de retas. É utilizado um VBO para armazenar os vértices.
+3 – 
