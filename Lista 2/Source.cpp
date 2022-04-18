@@ -36,7 +36,7 @@ int main()
 	glfwInit();
 
 	// Criação da janela GLFW
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Ola Triangulo! - Arthur", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Ola Triangulo! - Gustavo", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	// Fazendo o registro da função de callback para a janela GLFW
@@ -77,7 +77,7 @@ int main()
 	glm::mat4 projection = glm::mat4(1);// Matriz identidade
 
 	//Exercicio 1
-	//projection = glm::ortho(-10.0, 10.0, -10.0, 10.0, -1.0, 1.0);
+	projection = glm::ortho(-10.0, 10.0, -10.0, 10.0, -1.0, 1.0);
 
 	//Exercicio 2 
 	//projection = glm::ortho(0.0, 800.0, 600.0, 0.0, -1.0, 1.0);
@@ -85,7 +85,7 @@ int main()
 	//Com a janela assim, existe a possibilidade de um mapeamento 1 pra 1, onde 1 pixel significa 1 unidade no sistema carteseano.
 
 	//Exercicio 4 e 5
-	projection = glm::ortho(-2.0, 2.0, -2.0, 2.0, -1.0, 1.0);
+	//projection = glm::ortho(-2.0, 2.0, -2.0, 2.0, -1.0, 1.0);
 
 	GLint projLoc = glGetUniformLocation(shader.ID, "projection");
 	glUniformMatrix4fv(projLoc, 1, FALSE, glm::value_ptr(projection));
@@ -112,7 +112,7 @@ int main()
 		glPointSize(20);
 
 		//Exercicio 4
-		glViewport(width / 2, height / 2, width / 2, height / 2);
+		//glViewport(width / 2, height / 2, width / 2, height / 2);
 
 		// Chamada de desenho - drawcall
 		// Poligono Preenchido - GL_TRIANGLES
@@ -123,17 +123,17 @@ int main()
 
 
 		//Exercicio 5
-		glUniform4f(colorLoc, 1.0f, 0.0f, 0.0f, 1.0f);
-		glViewport(0, 0, width / 2, height / 2);
-		glDrawArrays(GL_TRIANGLES, 0, 3);//Triangulo Vermelho
+		//glUniform4f(colorLoc, 1.0f, 0.0f, 0.0f, 1.0f);
+		//glViewport(0, 0, width / 2, height / 2);
+		//glDrawArrays(GL_TRIANGLES, 0, 3);//Triangulo Vermelho
 
-		glUniform4f(colorLoc, 0.0f, 1.0f, 0.0f, 1.0f);
-		glViewport(width / 2, 0, width / 2, height / 2);
-		glDrawArrays(GL_TRIANGLES, 0, 3);//Triangulo Verde
+		//glUniform4f(colorLoc, 0.0f, 1.0f, 0.0f, 1.0f);
+		//glViewport(width / 2, 0, width / 2, height / 2);
+		//glDrawArrays(GL_TRIANGLES, 0, 3);//Triangulo Verde
 
-		glUniform4f(colorLoc, 0.0f, 0.0f, 1.0f, 1.0f);
-		glViewport(0, height / 2, width / 2, height / 2);
-		glDrawArrays(GL_TRIANGLES, 0, 3);//Triangulo Azul
+		//glUniform4f(colorLoc, 0.0f, 0.0f, 1.0f, 1.0f);
+		//glViewport(0, height / 2, width / 2, height / 2);
+		//glDrawArrays(GL_TRIANGLES, 0, 3);//Triangulo Azul
 
 
 
