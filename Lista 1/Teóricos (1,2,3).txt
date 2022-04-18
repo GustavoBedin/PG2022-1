@@ -1,6 +1,0 @@
-1 – É uma linguagem utilizada para o desenvolvimento de shaders dentro do pipeline do OpenGL.
- O Vertex shading que processa cada vértice separadamente e o Fragment shading que processa o fragmento separadamente.
-2 – Primitivas Gráficas são os elementos básicos que compõem um desenho, tais como pontos e segmentos de retas.
- É utilizado um VBO para armazenar os vértices.
-3 – VBO se refere a um buffer que contem os atributos e dados de um vertice. VAO é um objeto que armazena o necessario para fornecer os dados de vertice, podendo armazenar um VBO.
- O EBO usa a ideia de indices para evitar a replicacao de vertices como por exemplo na criacao de um quadrado ondo consegue criar um com apenas 4, enquanto o VBO precisa de 6.
