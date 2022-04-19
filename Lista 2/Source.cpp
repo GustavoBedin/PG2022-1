@@ -59,7 +59,7 @@ int main()
 
 
 	// Compilando e buildando o programa de shader
-	Shader shader("../shaders/hello.vs", "../shaders/hello.fs");
+	Shader shader("shaders/hello.vs", "shaders/hello.fs");
 
 	// Gerando um buffer simples, com a geometria de um triângulo
 	GLuint VAO = setupGeometry();
